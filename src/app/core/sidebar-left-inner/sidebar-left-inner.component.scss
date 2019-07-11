@@ -1,0 +1,38 @@
+.logo img{
+    height: 35px;
+    display: block;
+    margin: auto;
+}
+
+.logo{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+:host ::ng-deep{
+    .fc-day-number{
+        
+        &.selected{
+            position: relative;
+        }
+        &.selected::before{
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: #0000ff4d;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) and (min-width: 800px){
+    .calendar{
+        display: none;
+    }
+}

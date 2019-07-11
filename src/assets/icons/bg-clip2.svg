@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440px" height="12062px" viewBox="0 0 1440 12062" version="1.1" style="transform: scaleY(0.4) translateY(-9045px);">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-5.54307231%" y1="118.789191%" x2="127.58732%" y2="-21.0352068%" id="linearGradient-1">
+            <stop stop-color="#4F209E" offset="0%"/>
+            <stop stop-color="#4772C8" offset="53.8411914%"/>
+            <stop stop-color="#6EF1D9" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Webdiner---new-page-" transform="translate(0.000000, -10425.000000)" fill="url(#linearGradient-1)">
+            <g id="Section-6" transform="translate(-261.000000, 9575.000000)">
+                <g id="BG" transform="translate(0.000000, 563.000000)">
+                    <g xmlns="http://www.w3.org/2000/svg" id="Group-134" transform="translate(251.000000, 2.000000)">
+                        <path d="M0,469.1674 C143.730306,532.137163 295.648287,554.647141 455.753944,536.697333 C695.91243,509.772622 779.25577,408.490469 1022.10153,326.16349 C1183.99871,271.278837 1329.96487,271.278837 1460,326.16349 L1460,2695 C1186.80246,2644.83158 943.802461,2674.8406 731,2785.02706 C518.197539,2895.21351 274.530872,2895.21351 2.22877272e-13,2785.02706 L0,469.1674 Z" id="Path-11"/>
+    <rect width="1460" height="10000" x="0" y="2500" style="fill:#4772C8;">
+                    </rect></g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

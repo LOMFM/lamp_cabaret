@@ -1,0 +1,59 @@
+@import 'src/variable.scss';
+
+.search-form{
+    padding: 15px;
+    border: 1px solid gainsboro;
+    margin-top: 15px;
+}
+.form{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    & > label:not(.desc){
+        width: 120px;
+    }
+}
+.inline-combos{
+    display: inline-block;
+    
+    label{
+        margin-right: 30px;
+    }
+}
+
+table th{
+    background: $color-green;
+    color: white;
+    border: 1px solid gainsboro;
+}
+table tbody td{
+    border: 1px solid gainsboro;
+    background: #f8f8fa;
+}
+
+:host ::ng-deep{
+    .pagination:last-child{
+        display: none;
+    }
+    .pagination:first-child{
+        float: right;
+        margin: 0px;
+
+        .page-item .page-link{
+            border: none;
+            background: transparent;
+        }
+        .page-item.active .page-link{
+            color: blue;
+        }
+        .page-item:first-child a{
+            border: 0px;
+            font-size: 24px;
+            line-height: 18px;
+        }
+        .page-item:last-child a{
+            border: 0px;
+            font-size: 24px;
+            line-height: 18px;
+        }
+    }
+}

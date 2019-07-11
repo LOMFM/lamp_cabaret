@@ -1,0 +1,21 @@
+@import 'src/variable.scss';
+
+.search-form{
+    padding: 15px;
+    border: 1px solid gainsboro;
+    margin-top: 15px;
+}
+.form{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    & > label:not(.desc){
+        width: 120px;
+    }
+}
+.inline-combos{
+    display: inline-block;
+    
+    label{
+        margin-right: 30px;
+    }
+}

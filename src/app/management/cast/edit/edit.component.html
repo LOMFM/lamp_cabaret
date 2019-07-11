@@ -1,0 +1,96 @@
+<div class="container">
+  <h4>新規キャスト登録</h4>
+  <form>
+    <div class="form">
+      <label>入店店舗</label>
+      <select></select>
+      <label class="desc">（キャストIDの先頭文字が決定）</label>
+    </div>
+    <div class="form">
+      <label>入店日</label>
+      <select></select>
+      <label class="desc">（月でキャストIDの2番目文字が決定）</label>
+    </div>
+    <div class="form">
+      <label>源氏名</label>
+      <select></select>
+      <label class="desc">（入力した源氏名の漢字コードJISでキャストIDの後ろ4桁が決定）</label>
+    </div>
+    <div class="form">
+      <label>キャストID</label>
+      <select></select>
+      <label class="desc"><input type="checkbox" name="" /> 移店（移店したキャスト登録の場合チェックして移転前のキャストIDを入力）</label>
+    </div>
+    <div class="form">
+      <label>紹介元</label>
+      <select></select>
+      <label class="desc">（入力した源氏名の漢字コードJISでキャストIDの後ろ4桁が決定）</label>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form">
+          <label>契約</label>
+          <select></select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form">
+          <label>時給</label>
+          <input type="text" />
+          <span class="unit">円</span>
+        </div>
+        <div class="form">
+          <label>ポイント</label>
+          <input type="text" />
+          <span class="unit">Point</span>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <label>本指名売上</label>
+      <input type="number" />
+      <span class="unit">%</span>
+    </div>
+    <div class="form">
+      <label>場内指名売上</label>
+      <input type="number" />
+      <span class="unit">%</span>
+    </div>
+    <div class="form">
+      <label>同伴売上</label>
+      <input type="number" />
+      <span class="unit">%</span>
+    </div>
+    <h4>[キャスト情報]</h4>
+    <div class="address-info">
+      <div class="form">
+        <label>氏名</label>
+        <input type="text" [(ngModel)]="cast.cast_name" />
+      </div>
+      <div class="form">
+        <label>連絡先TEL</label>
+        <input type="text" [(ngModel)]="cast.tel_no" />
+      </div>
+      <div class="form">
+        <label>住所</label>
+        <input type="text" [(ngModel)]="cast.zip_code" /><input type="text" [(ngModel)]="cast.address" />
+        <div class="form">
+          <label>建物名等</label>
+          <input type="text" [(ngModel)]="cast.tatemono" />
+        </div>
+      </div>
+      <div class="form">
+        <label>担当M</label>
+        <select></select>
+      </div>
+      <div class="form">
+        <label>派遣先</label>
+        <select></select>
+      </div>
+      <div class="form">
+        <label>退職日</label>
+        <input type="text">
+      </div>
+    </div>
+  </form>
+</div>

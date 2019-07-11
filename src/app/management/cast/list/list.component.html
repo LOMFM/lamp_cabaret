@@ -1,0 +1,73 @@
+<div class="container">
+    <h4 class="page-title">キャスト検索</h4>
+    <a class="btn btn-new" [routerLink]="management/cast/new">新規キャスト登録</a>
+    <div class="search-form">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form">
+            <label>キャストID</label>
+            <input type="text" [(ngModel)]="castID" />
+          </div>
+          <div class="form">
+            <label>源氏名</label>
+            <input type="text" [(ngModel)]="sourceName" />
+            <label class="desc">（２文字以上の曖昧）</label>
+          </div>
+          <div class="form">
+            <label>本名</label>
+            <input type="text" [(ngModel)]="name" />
+            <label class="desc">（２文字以上の曖昧）</label>
+          </div>
+          <div class="form">
+            <label>所属</label>
+            <div class="inline-combos">
+              <label><input type="radio" name="belong">すべて</label>
+              <label><input type="radio" name="belong">店</label>
+              <label><input type="radio" name="belong">パートナー会社</label>
+            </div>
+          </div>
+          <div class="form">
+            <label>給与区分</label>
+            <div class="inline-combos">
+              <label><input type="radio" name="salary">すべて</label>
+              <label><input type="radio" name="salary">日払い</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form">
+            <label>担当</label>
+            <input type="text" [(ngModel)]="castID" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-result">
+        <table class="table" [mfData]="casts" #mf="mfDataTable" [mfRowsOnPage]="20">
+            <thead>
+              <tr><td colspan="7"><mfBootstrapPaginator [rowsOnPageSet]="[20]"></mfBootstrapPaginator></td></tr>
+              <tr>
+                <th style="width: 60px;">No</th>
+                <th class="cast-id">キャストID</th>
+                <th class="cast-source-name">源氏名</th>
+                <th class="cast-name">本名</th>
+                <th style="width: 70px;">所属</th>
+                <th style="width: 80px">給与区分</th>
+                <th>担当</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of mf.data; let i = index">
+                <td>{{i + 1}}</td>
+                <td><a>{{item.cast_id}}</a></td>
+                <td>{{item.source_name}}</td>
+                <td>{{item.cast_name}}</td>
+                <td>{{item.dispatch_id}}</td>
+                <td>{{item.source_name}}</td>
+                <td>{{item.name}}</td>
+              </tr>
+            </tbody>
+            
+          </table>
+    </div>
+  </div>
