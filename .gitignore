@@ -63,5 +63,4 @@ typings/
 # Build Version
 dist/
 
-package.json
 package-lock.json

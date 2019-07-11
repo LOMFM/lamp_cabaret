@@ -1,11 +1,3 @@
-<nav class="navbar">
-  <div class='logo'>
-    <a routerLink="/"><img src="./assets/icons/logo.png"></a>
-  </div>
-  <div class='navbar-links'>
-    <a routerLink="/signup">Sign up</a>
-  </div>
-</nav>
 
 <div class="hold-transition login-page">
   <div class="login-box">
@@ -18,82 +10,16 @@
         {{this.error}}
       </div>
       <div class="form-group has-feedback input-form">
-        <input type="email" class="form-control input-default" placeholder="Email" [(ngModel)]="user.email">
+        <input type="email" class="form-control input-default" placeholder="" [(ngModel)]="user.email">
       </div>
       <div class="form-group has-feedback input-form password-wrapper">
         <input type="password" class="form-control input-default" placeholder="Password" [(ngModel)]="user.password">
-        <a class="form-control-feedback" (click)="openForgotPassword()">Forgot Password</a>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <a type="submit" class="btn bg-blue round" (click)="login()">Let's go</a>
+          <a type="submit" class="btn bg-blue round" (click)="login()"></a>
         </div>
       </div>
-
-      <div style="margin: 20px auto; text-align: center;">OR</div>
-
-      <div class="social-auth-links text-center">
-        <a class="btn btn-block btn-social btn-google btn-flat bg-light-blue" (click)="socialSignIn('google')"><i
-            class="icon icon-google"></i> Continue with Google</a>
-      </div>
-
-      <div class="social-auth-links text-center">
-        <a class="btn btn-block btn-social btn-google btn-flat bg-light-blue" (click)="socialSignIn('office')"><i
-            class="icon icon-office"></i> Continue with Office</a>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 15px;">Don't you have account? <a href="/signup">Create New account</a>
-    </div>
-    <!-- /.login-box-body -->
-  </div>
-</div>
-
-<div class="popup forgot-popup" [class.open]="forgotPassword">
-  <div class="popup-scroll" (click)="checkClosePopup($event)">
-    <div class="popup-wrapper" [class.invisible]="!firstStep">
-      <span class="step-letter">STEP 1 OF 2</span>
-      <h1 class="step-title">Reset your password</h1>
-      <p class="step-description">Enter your email address, and we'll send instructions to reset your password.</p>
-      <form #forgotRequestForm="ngForm" (ngSubmit)="resetPasswordRequest()">
-        <div class="form-request-error" [hidden]="!forgotRequestFormError">{{forgotRequestFormError}}</div>
-        <div class="form-group has-feedback input-form password-wrapper">
-          <input type="email" class="form-control input-default" placeholder="Email Address" id="forgotRequestEmail" name="forgotRequestEmail" required [(ngModel)]="forgot_email" #forgotRequestEmail="ngModel">
-          <div class="error-alert" *ngIf="forgotRequestEmail.errors && (forgotRequestEmail.touched || forgotRequestEmail.dirty)">
-            You must input the email address.
-          </div>
-        </div>
-        <button class="btn" type="submit" [disabled]="!forgotRequestForm.form.valid">Send Password Reset Email</button>
-      </form>
-      <a class="link" (click)="toStep2()">I already have a reset code</a>      
-    </div>
-    <div class="popup-wrapper" [class.invisible]="firstStep">
-      <span class="step-letter">STEP 2 OF 2</span>
-      <h1 class="step-title">Check your email</h1>
-      <p class="step-description">Please enter the reset code. Then create and confirm your new password.</p>
-      <form #resetPasswordForm="ngForm" (ngSubmit)="resetPassword()">
-          <div class="form-request-error" [hidden]="!resetPasswordFormError">{{resetPasswordFormError}}</div>
-        <div class="form-group has-feedback input-form password-wrapper">
-          <input type="email" class="form-control input-default" placeholder="Reset Code" [(ngModel)]="reset_code" name="resetCode" #resetCode="ngModel" maxlength="5" minlength="5" required>
-          <div class="error-alert" *ngIf="resetCode.errors && ( resetCode.touched || resetCode.dirty)">
-            <div [hidden]="!resetCode.errors.required">Reset code is required!</div>
-            <div [hidden]="!resetCode.errors.minlength && !resetCode.errors.maxlength">Reset code must be 5 characters.</div>
-          </div>
-        </div>
-        <div class="form-group has-feedback input-form password-wrapper">
-          <input type="password" class="form-control input-default" placeholder="New Password" [(ngModel)]="new_password" name="newPassword" #newPassword="ngModel" required>
-          <div lcass="error-alert" *ngIf="newPassword.errors && (newPassword.touched || newPassword.dirty)">
-            The password is required!
-          </div>
-        </div>
-        <div class="form-group has-feedback input-form password-wrapper">
-          <input type="password" class="form-control input-default" placeholder="Confirm Password" [(ngModel)]="confirm_password" name="confirmPassword" #confirmPassword="ngModel" required>
-          <div lcass="error-alert" *ngIf="confirmPassword.errors && (confirmPassword.touched || confirmPassword.dirty)">
-            The confirm password is required!
-          </div>
-        </div>
-        <button class="btn" type="submit" [disabled]="!resetPasswordForm.form.valid">Reset Password</button>
-      </form>
-      <a class="link" (click)="toStep1()">Send a new reset code</a>
     </div>
   </div>
 </div>
