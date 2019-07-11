@@ -2,16 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { adminLteConf } from './admin-lte.conf';
-
-import { AuthGuardGuard } from './guards/auth-guard.guard';
-
 import { LayoutModule } from 'angular-admin-lte';
 import { LoadingPageModule, MaterialBarModule } from 'angular-loading-page';
-
-import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AuthGuardGuard } from './guards/auth-guard.guard';
+import { CoreModule } from './core/core.module';
+import { ManagerComponent } from './pages/manager/manager.component';
 
 @NgModule({
   imports: [
@@ -26,9 +25,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   declarations: [
     AppComponent,
+    ManagerComponent,
   ],
   providers: [
-
+    
   ],
   bootstrap: [AppComponent]
 })

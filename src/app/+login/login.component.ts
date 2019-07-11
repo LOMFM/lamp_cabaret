@@ -8,11 +8,25 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor(){
+  
+  user = {
+    email: "",
+    password: ""
+  }
+  constructor(
+    private router: Router
+  ){
 
   }
 
   ngOnInit(){
-    
+
+  }
+
+  login(){
+    if( this.user.email == "admin@gmail.com" && this.user.password == "admin" ){
+      console.log("logged in");
+      this.router.navigate(['/manager'])
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ViewComponent } from 'src/app/management/cast/view/view.component';
+import { ManagerComponent } from './pages/manager/manager.component';
+
 
 const routes: Routes = [
   {
@@ -10,6 +11,13 @@ const routes: Routes = [
       customLayout: true,
       title: 'Login'
     },
+  },
+  {
+    path: 'manager',
+    component: ManagerComponent,
+    data: {
+      customLayout: true
+    }
   },
   {
     path: 'management',

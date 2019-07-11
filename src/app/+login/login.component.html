@@ -1,23 +1,22 @@
 
 <div class="hold-transition login-page">
   <div class="login-box">
-    <div class="login-logo">
-      Please login to continue
-    </div>
     <!-- /.login-logo -->
-    <div class="login-box-body" (keyup)="loginTrigger($event)">
+    <div class="login-box-body">
       <div class="error" *ngIf="error">
         {{this.error}}
       </div>
       <div class="form-group has-feedback input-form">
-        <input type="email" class="form-control input-default" placeholder="" [(ngModel)]="user.email">
+        <label>ユーザー名</label>
+        <input type="email" class="form-control input-default" [(ngModel)]="user.email">
       </div>
       <div class="form-group has-feedback input-form password-wrapper">
-        <input type="password" class="form-control input-default" placeholder="Password" [(ngModel)]="user.password">
+        <label>パスワード</label>
+        <input type="password" class="form-control input-default" [(ngModel)]="user.password">
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <a type="submit" class="btn bg-blue round" (click)="login()"></a>
+          <a type="submit" class="btn bg-blue round" (click)="login()">ログイン</a>
         </div>
       </div>
     </div>
